@@ -1,4 +1,4 @@
-# passagens
+# Passagens
 
 Esse repositório apresenta códigos em várias linguagens (Golang, PHP, Python, Javascript, Julia, Ruby, Lua, V e outras) escritos representar o mesmo algoritmo.
 
