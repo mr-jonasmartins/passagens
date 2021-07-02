@@ -11,32 +11,31 @@ foreach ($tentativas as $tentativa) {
 
     $i = $i + 1;
 
-    if ( $tentativa=="A>B" && count($ab) < $poltronas ) {
+    if ($tentativa == "A>B" && count($ab) < $poltronas ) {
         array_push($ab,$i);
-        //echo "$tentativa\n"
     }
 
-    if (  $tentativa  == "A>C" && count($ab) < $poltronas && count($bc) < $poltronas ) {
+    if ($tentativa == "A>C" && count($ab) < $poltronas && count($bc) < $poltronas) {
         array_push($ab,$i); 
         array_push($bc,$i);
     }
 
-    if ( $tentativa == "A>D" && count($ab)  < $poltronas && count($bc) < $poltronas && count($cd) < $poltronas) {
+    if ($tentativa == "A>D" && count($ab)  < $poltronas && count($bc) < $poltronas && count($cd) < $poltronas) {
         array_push($ab,$i); 
         array_push($bc,$i); 
         array_push($cd,$i);
     }
 
-    if ( $tentativa == "B>C" && count($bc) < $poltronas) {
+    if ($tentativa == "B>C" && count($bc) < $poltronas) {
         array_push($bc,$i);
     }
 
-    if ( $tentativa == "B>D" && count($bc) < $poltronas && count($cd) < $poltronas) {
+    if ($tentativa == "B>D" && count($bc) < $poltronas && count($cd) < $poltronas) {
         array_push($bc,$i); 
         array_push($cd,$i);
     }
 
-    if ( $tentativa == "C>D" && count($cd) < $poltronas) {
+    if ($tentativa == "C>D" && count($cd) < $poltronas) {
         array_push($cd,$i);
     }
     
