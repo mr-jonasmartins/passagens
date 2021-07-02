@@ -31,6 +31,7 @@ func main() {
 		if tentativa == "A>B" && len(ab) < poltronas {
 			ab = append(ab, i)
 		}
+		
 		if tentativa == "A>C" && len(ab) < poltronas && len(bc) < poltronas {
 			ab = append(ab, i)
 			bc = append(bc, i)

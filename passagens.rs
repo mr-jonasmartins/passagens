@@ -14,15 +14,18 @@ fn main() {
         if tentativa.to_string() == "A>B" && ab.len() < poltronas {
             ab.push(i);
         }
+
         if tentativa.to_string() == "A>C" && ab.len() < poltronas && bc.len() < poltronas {
             ab.push(i);
             bc.push(i);
         }
+
         if tentativa.to_string() == "A>D" && ab.len() < poltronas && bc.len() < poltronas && cd.len() < poltronas {
             ab.push(i);
             bc.push(i);
             cd.push(i);
         }
+        
         if tentativa.to_string() == "B>C" && bc.len() < poltronas {
             bc.push(i);
         }
