@@ -1,6 +1,6 @@
 # Passagens
 
-Esse repositório apresenta códigos em várias linguagens (Golang, PHP, Python, Javascript, Julia, Ruby, Lua, V e outras) escritos representar o mesmo algoritmo.
+Esse repositório apresenta códigos em várias linguagens (Dart, Golang, PHP, Python, Javascript, Julia, Ruby, Lua, V e Rust) escritos representar o mesmo algoritmo.
 
 Eu chamo de “algoritmo da compra de passagens”.
 

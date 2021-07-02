@@ -8,7 +8,9 @@ fn main() {
     let mut i = 0;
     
     for tentativa in tentativas.iter() {
+
         i = i + 1;
+        
         if tentativa.to_string() == "A>B" && ab.len() < poltronas {
             ab.push(i);
         }
@@ -16,17 +18,11 @@ fn main() {
             ab.push(i);
             bc.push(i);
         }
-
-        if tentativa.to_string() == "A>D"
-            && ab.len() < poltronas
-            && bc.len() < poltronas
-            && cd.len() < poltronas
-        {
+        if tentativa.to_string() == "A>D" && ab.len() < poltronas && bc.len() < poltronas && cd.len() < poltronas {
             ab.push(i);
             bc.push(i);
             cd.push(i);
         }
-
         if tentativa.to_string() == "B>C" && bc.len() < poltronas {
             bc.push(i);
         }
