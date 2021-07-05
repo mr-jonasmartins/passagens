@@ -3,6 +3,7 @@ tentativas = ["A>C","A>C","A>C","B>D","B>D","B>D","B>D","B>D","A>B","A>B","A>B",
 ab, bc, cd, poltronas, i = [], [], [], 45, 0
 
 for tentativa in tentativas:
+#for i, tentativa in enumerate(tentativas, start = 1):
 
 	i = i + 1
 
