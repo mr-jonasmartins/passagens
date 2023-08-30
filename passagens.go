@@ -2,27 +2,14 @@ package main
 
 import (
 	"fmt"
+	"slices"
 )
-
-func include(arr []int, num int) bool {
-	for _, v := range arr {
-		if v == num {
-			return true
-		}
-	}
-
-	return false
-}
 
 func main() {
 
-	tentativas := [...]string{"A>C", "A>C", "A>C", "B>D", "B>D", "B>D", "B>D", "B>D", "A>B", "A>B", "A>B", "A>B", "B>C", "B>C", "B>C", "B>C", "B>C", "A>D", "A>D", "A>D", "A>D", "A>D", "A>D", "A>D", "A>D", "A>D", "C>D", "C>D", "C>D", "C>D", "C>D", "C>D", "C>D", "C>D", "B>D", "B>D", "B>D", "B>D", "B>C", "B>C", "B>C", "A>C", "A>B", "A>B", "B>C", "B>C", "B>C", "A>C", "C>D", "C>D", "C>D", "C>D", "C>D", "C>D", "C>D", "B>D", "B>D", "B>D", "B>D", "A>B", "A>B", "A>B", "A>B", "A>B", "A>B", "A>B", "A>B", "A>B", "A>B", "A>B", "A>C", "A>C", "A>C", "A>C", "A>C", "A>C", "A>C", "A>C", "A>C", "A>C", "A>D", "C>D", "C>D", "C>D", "C>D", "B>D", "B>D", "B>D", "B>D", "B>D", "A>B", "A>B", "A>C", "A>C", "A>C", "C>D", "C>D", "A>B", "A>B", "A>D"}
+	tentativas := []string{"A>C", "A>C", "A>C", "B>D", "B>D", "B>D", "B>D", "B>D", "A>B", "A>B", "A>B", "A>B", "B>C", "B>C", "B>C", "B>C", "B>C", "A>D", "A>D", "A>D", "A>D", "A>D", "A>D", "A>D", "A>D", "A>D", "C>D", "C>D", "C>D", "C>D", "C>D", "C>D", "C>D", "C>D", "B>D", "B>D", "B>D", "B>D", "B>C", "B>C", "B>C", "A>C", "A>B", "A>B", "B>C", "B>C", "B>C", "A>C", "C>D", "C>D", "C>D", "C>D", "C>D", "C>D", "C>D", "B>D", "B>D", "B>D", "B>D", "A>B", "A>B", "A>B", "A>B", "A>B", "A>B", "A>B", "A>B", "A>B", "A>B", "A>B", "A>C", "A>C", "A>C", "A>C", "A>C", "A>C", "A>C", "A>C", "A>C", "A>C", "A>D", "C>D", "C>D", "C>D", "C>D", "B>D", "B>D", "B>D", "B>D", "B>D", "A>B", "A>B", "A>C", "A>C", "A>C", "C>D", "C>D", "A>B", "A>B", "A>D"}
 
-	poltronas := 45
-
-	ab := []int{}
-	bc := []int{}
-	cd := []int{}
+	ab, bc, cd, poltronas := []int{}, []int{}, []int{}, 45
 
 	for i, tentativa := range tentativas {
 
@@ -31,7 +18,7 @@ func main() {
 		if tentativa == "A>B" && len(ab) < poltronas {
 			ab = append(ab, i)
 		}
-		
+
 		if tentativa == "A>C" && len(ab) < poltronas && len(bc) < poltronas {
 			ab = append(ab, i)
 			bc = append(bc, i)
@@ -56,7 +43,7 @@ func main() {
 			cd = append(cd, i)
 		}
 
-		if include(ab, i) || include(bc, i) || include(cd, i) {
+		if slices.Contains(ab, i) || slices.Contains(bc, i) || slices.Contains(cd, i) {
 			fmt.Printf("%d - %s - VENDER\n", i, tentativa)
 		} else {
 			fmt.Printf("%d - %s - NAO VENDER\n", i, tentativa)
