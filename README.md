@@ -1,6 +1,6 @@
 # Passagens
 
-Esse repositório apresenta códigos em várias linguagens (C, Swift, Perl, Dart, Golang, PHP, Python, Javascript, Julia, Ruby, Lua, V, Rust e R) escritos para representar o mesmo algoritmo.
+Esse repositório apresenta códigos em várias linguagens (B, C, Swift, Perl, Dart, Golang, PHP, Python, Javascript, Julia, Ruby, Lua, V, Rust e R) escritos para representar o mesmo algoritmo.
 
 E agora, escrito também, com a novíssima lingugaem Blade.
 
